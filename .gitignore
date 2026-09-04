@@ -1,23 +1,15 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
-.vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-files
-*.bclicense
-*.flf
-#Test results file
-TestResults.xml
+l1 = []
+l2 = []
+x = "123456789"
+for i in range(9):
+    n = input().split()
+    for i in range(len(x)):
+        if int(n[1])-1 == i:
+            x = x.replace(x[i],n[0])
+    print(chr(9484)+(4*chr(9472))+chr(9516)+(4*chr(9472))+chr(9516)+(4*chr(9472))+(chr(9488)))
+    print(chr(9474)+f" {x[0]}  "+chr(9474)+f" {x[1]}  "+chr(9474)+f" {x[2]}  "+chr(9474))
+    print(chr(9500)+(4*chr(9472))+chr(9532)+(4*chr(9472))+chr(9532)+(4*chr(9472))+chr(9508))
+    print(chr(9474)+f" {x[3]}  "+chr(9474)+f" {x[4]}  "+chr(9474)+f" {x[5]}  "+chr(9474))
+    print(chr(9500)+(4*chr(9472))+chr(9532)+(4*chr(9472))+chr(9532)+(4*chr(9472))+chr(9508))
+    print(chr(9474)+f" {x[6]}  "+chr(9474)+f" {x[7]}  "+chr(9474)+f" {x[8]}  "+chr(9474))
+    print(chr(9492)+(4*chr(9472))+chr(9524)+(4*chr(9472))+chr(9524)+(4*chr(9472))+chr(9496))
