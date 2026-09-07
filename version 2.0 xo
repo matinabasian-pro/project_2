@@ -1,0 +1,16 @@
+x = "123456789"
+for i in range(1,10):
+    if i%2!=0:
+        n = input("X: ").split()
+    else:
+        n = input("O: ").split()
+    for i in range(len(x)):
+        if int(n[1])-1 == i:
+            x = x.replace(x[i],n[0])
+    print(chr(9484)+(4*chr(9472))+chr(9516)+(4*chr(9472))+chr(9516)+(4*chr(9472))+(chr(9488)))
+    print(chr(9474)+f" {x[0]}  "+chr(9474)+f" {x[1]}  "+chr(9474)+f" {x[2]}  "+chr(9474))
+    print(chr(9500)+(4*chr(9472))+chr(9532)+(4*chr(9472))+chr(9532)+(4*chr(9472))+chr(9508))
+    print(chr(9474)+f" {x[3]}  "+chr(9474)+f" {x[4]}  "+chr(9474)+f" {x[5]}  "+chr(9474))
+    print(chr(9500)+(4*chr(9472))+chr(9532)+(4*chr(9472))+chr(9532)+(4*chr(9472))+chr(9508))
+    print(chr(9474)+f" {x[6]}  "+chr(9474)+f" {x[7]}  "+chr(9474)+f" {x[8]}  "+chr(9474))
+    print(chr(9492)+(4*chr(9472))+chr(9524)+(4*chr(9472))+chr(9524)+(4*chr(9472))+chr(9496))
