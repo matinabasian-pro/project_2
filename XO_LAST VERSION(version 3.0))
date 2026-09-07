@@ -1,0 +1,61 @@
+def prt():
+    print(chr(9484)+(4*chr(9472))+chr(9516)+(4*chr(9472))+chr(9516)+(4*chr(9472))+(chr(9488)))
+    print(chr(9474)+f" {x[0]}  "+chr(9474)+f" {x[1]}  "+chr(9474)+f" {x[2]}  "+chr(9474))
+    print(chr(9500)+(4*chr(9472))+chr(9532)+(4*chr(9472))+chr(9532)+(4*chr(9472))+chr(9508))
+    print(chr(9474)+f" {x[3]}  "+chr(9474)+f" {x[4]}  "+chr(9474)+f" {x[5]}  "+chr(9474))
+    print(chr(9500)+(4*chr(9472))+chr(9532)+(4*chr(9472))+chr(9532)+(4*chr(9472))+chr(9508))
+    print(chr(9474)+f" {x[6]}  "+chr(9474)+f" {x[7]}  "+chr(9474)+f" {x[8]}  "+chr(9474))
+    print(chr(9492)+(4*chr(9472))+chr(9524)+(4*chr(9472))+chr(9524)+(4*chr(9472))+chr(9496))
+def check(l1,l2):
+    a = {"1","2","3"}
+    b = {"1","5","9"}
+    c = {"1","4","7"}
+    d = {"2","5","8"}
+    e = {"3","6","9"}
+    f = {"4","5","6"}
+    g = {"3","5","7"}
+    h = {"7","8","9"}
+    if a.issubset(l1) or b.issubset(l1) or c.issubset(l1) or d.issubset(l1) or e.issubset(l1) or f.issubset(l1) or g.issubset(l1) or h.issubset(l1):
+        return "px"
+    if a.issubset(l2) or b.issubset(l2) or c.issubset(l2) or d.issubset(l2) or e.issubset(l2) or f.issubset(l2) or g.issubset(l2) or a.issubset(l2):
+        return "po"  
+l1=set()
+l2=set()
+turn = True
+x = ["1","2","3","4","5","6","7","8","9"]
+while True: 
+    prt()
+    if check(l1,l2)=="px":
+        print("px")
+        break
+    elif check(l1,l2)=="po":
+        print("po")
+        break
+    if turn :
+        n = input("X: ").split()
+        if n[0] != "x":
+            print("retry")
+            continue
+        if x[int(n[1])-1] !="x" and x[int(n[1])-1]!="o":
+            x[int(n[1])-1]=n[0]
+            l1.add(n[1])
+            turn = not turn
+        else:
+            print("chose other number for next time!")
+            continue
+    else:
+        n = input("O: ").split()
+        if n[0] != "o":
+            print("retry")
+            continue
+        if x[int(n[1])-1] !="x" and x[int(n[1])-1]!="o":
+            x[int(n[1])-1]=n[0]
+            l2.add(n[1])
+            turn = not turn
+        else:
+            print("chose other number for next time!")
+            continue
+    if len(l1)==5 and len(l2)==4:
+            print("no winner!")
+            break
+        
